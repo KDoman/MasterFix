@@ -4,7 +4,7 @@ import { workersTemplate } from "../data/WorkersTemplate";
 
 export const LoggedInClientView = () => {
   return (
-    <div className="shadow-xl-midle rounded-lg p-5 mx-6">
+    <div className="shadow-xl-midle rounded-lg p-5 mx-6 ">
       <h2 className="pt-2 pb-8 text-2xl font-bold">Witaj Imię!</h2>
       <Input id="text" type="text">
         Wyszukaj fachowca
@@ -36,13 +36,12 @@ export const LoggedInClientView = () => {
           </li>
         </ul>
       </div>
-      <div id="container-card" className="mt-2">
-        {workersTemplate.map((worker, index) => (
-          <>
-            <Card {...worker} index={index} />
-          </>
-        ))}
-      </div>
+      <h2 className="mt-5">Lista aktywnych fachowców</h2>
+      {workersTemplate.map((worker, index) => (
+        <>
+          <Card {...worker} index={index} />
+        </>
+      ))}
     </div>
   );
 };
